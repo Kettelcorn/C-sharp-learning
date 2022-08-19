@@ -15,20 +15,19 @@ namespace app
         {
             //linked list
             LinkedList<int> listy = new LinkedList<int>();
-            listy.AddLast(5);
+            listy.AddLast(5); //adds value to end of linked list
             listy.AddLast(10);
             listy.AddLast(75);
             Console.WriteLine("LinkedLists:");
-            Console.WriteLine(string.Join(",", listy));
+            Console.WriteLine(string.Join(",", listy)); //prints linked list in string form
             Console.WriteLine();
 
             //arrays
             int[] lmao = new int[] { 1, 2, 3, 4, 5};
             int[] lmao2 = new int[3];
             lmao[2] = 5;
-            string length = "" + lmao.Length; // Capital L
             Console.WriteLine("Arrays:");
-            Console.WriteLine(length);
+            Console.WriteLine(lmao.Length); //capital L
             Console.WriteLine(string.Join(",", lmao));
             Console.WriteLine();
 
