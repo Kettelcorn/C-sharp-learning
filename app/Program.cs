@@ -7,6 +7,7 @@ using System.Collections.Generic; //needed for different data structures (collec
 // Terminal > Integrated:Cwd settings to change directory
 // then type dotnet new console -o 'folder name' to make new project
 // to run code, type dotnet run
+//ls to see inside directory
 namespace app
 {
     class Program
