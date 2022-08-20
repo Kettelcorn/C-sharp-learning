@@ -14,13 +14,25 @@ namespace app
         static void Main(string[] args)
         {
             //linked list
+            // doc: https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.linkedlist-1?view=net-6.0
             LinkedList<int> listy = new LinkedList<int>();
             listy.AddLast(5); //adds value to end of linked list
             listy.AddLast(10);
             listy.AddLast(75);
+            LinkedListNode<int> pointer = listy.First; // doc: https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.linkedlistnode-1?view=net-6.0
+            Console.WriteLine("The first element in this linked list is: " + pointer.Value);
+            Console.WriteLine("The next element is: " + pointer.Next.Value);
             Console.WriteLine("LinkedLists:");
             Console.WriteLine(string.Join(",", listy)); //prints linked list in string form
+            IEnumerator<int> en = listy.GetEnumerator(); //sets up enumerator to iterate through linked list
+            en.Reset(); // sets position to begining of linked list
+            while (en.MoveNext()) //checks if there is another node in linked list
+            {
+                Console.WriteLine(en.Current);   
+            }
             Console.WriteLine();
+
+
 
             //arrays
             int[] lmao = new int[] { 1, 2, 3, 4, 5};
